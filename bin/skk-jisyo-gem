@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require "skk/jisyo"
+
+include Skk::Jisyo
+
+cmd = ARGV[0]
+args = ARGV[1..-1]
+case ARGV[0]
+when "path"
+  puts args.empty? ? path : path(args.first)
+when "version"
+  puts VERSION
+else
+  puts "usage: #{__FILE__} [path | version]"
+end
