@@ -1,22 +1,28 @@
 #!/usr/bin/env ruby
 
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require "skk/jisyo"
-
-include Skk::Jisyo
 
 cmd = ARGV[0]
 args = ARGV[1..-1]
-case ARGV[0]
+
+case cmd
 when "path"
   if args.empty?
-    Skk::Jisyo.path
+    puts Skk::Jisyo.path
   else
-    Skk::Jisyo.path(args.first)
+    puts Skk::Jisyo.path(args.first)
+  end
+when "url"
+  if args.empty?
+    puts Skk::Jisyo.url
+  else
+    puts Skk::Jisyo.url(args.first)
   end
 when "update"
-  Skk::Jisyo.update
+  Skk::Jisyo.update_all
 when "version"
   puts VERSION
 else
-  puts "usage: #$0 [path | update | version]"
+  puts "usage: #$0 [path | url | update | version]"
 end

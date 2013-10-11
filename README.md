@@ -16,6 +16,10 @@ Or install it yourself as:
 
     $ gem install skk-jisyo
 
+Update SKK-JISYO files:
+
+    $ skk-jisyo-gem update
+
 ## Usage
 
 TODO: Write usage instructions here
