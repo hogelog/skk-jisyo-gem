@@ -8,9 +8,15 @@ cmd = ARGV[0]
 args = ARGV[1..-1]
 case ARGV[0]
 when "path"
-  puts args.empty? ? path : path(args.first)
+  if args.empty?
+    Skk::Jisyo.path
+  else
+    Skk::Jisyo.path(args.first)
+  end
+when "update"
+  Skk::Jisyo.update
 when "version"
   puts VERSION
 else
-  puts "usage: #{__FILE__} [path | version]"
+  puts "usage: #$0 [path | update | version]"
 end
