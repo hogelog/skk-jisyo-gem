@@ -13,16 +13,24 @@ when "path"
   else
     puts Skk::Jisyo.path(args.first)
   end
+when "paths"
+  Skk::Jisyo.paths.each do |path|
+    puts path
+  end
 when "url"
   if args.empty?
     puts Skk::Jisyo.url
   else
     puts Skk::Jisyo.url(args.first)
   end
+when "urls"
+  Skk::Jisyo.urls.each do |url|
+    puts url
+  end
 when "update"
   Skk::Jisyo.update_all
 when "version"
   puts VERSION
 else
-  puts "usage: #$0 [path | url | update | version]"
+  puts "usage: #$0 [path | paths| url | urls | update | version]"
 end

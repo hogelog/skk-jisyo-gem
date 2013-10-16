@@ -11,8 +11,6 @@ require 'skk/jisyo'
 namespace :jisyo do
   desc "Update SKK-JISYO files."
   task :update do |task, args|
-    %w(L jinmei station propernoun).each do |suffix|
-      Skk::Jisyo.update(suffix)
-    end
+    Skk::Jisyo.update_all
   end
 end

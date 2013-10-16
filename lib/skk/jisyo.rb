@@ -16,8 +16,16 @@ module Skk
       "#{JISYO_URL}/SKK-JISYO.#{suffix}"
     end
 
+    def self.urls
+      Settings.jisyo_list.map{|suffix| url(suffix) }
+    end
+
     def self.path(suffix = "L")
       "#{JISYO_DIR}/SKK-JISYO.#{suffix}"
+    end
+
+    def self.paths
+      Settings.jisyo_list.map{|suffix| path(suffix) }
     end
 
     def self.update(suffix = "L")
