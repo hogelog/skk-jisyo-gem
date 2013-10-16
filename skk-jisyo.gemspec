@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["konbu.komuro@gmail.com"]
   spec.description   = %q{Install SKK-JISYO files}
   spec.summary       = %q{Install SKK-JISYO}
-  spec.homepage      = "https://github.com/hogelog/skk-jisyo"
+  spec.homepage      = "https://github.com/hogelog/skk-jisyo-gem"
   spec.license       = "GPL3"
 
   spec.files         = `git ls-files`.split($/)
