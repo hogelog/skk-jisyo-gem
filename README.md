@@ -18,7 +18,7 @@ Or install it yourself as:
 
 Update SKK-JISYO files:
 
-    $ skk-jisyo-gem update
+    $ skk-jisyo-manage update
 
 ## Usage
 
